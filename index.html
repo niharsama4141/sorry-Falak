@@ -300,6 +300,74 @@ button:active{
     color:#aaa;
 }
 
+.memory.photo-memory{
+    padding:0;
+    overflow:hidden;
+    position:relative;
+    min-height:260px;
+    justify-content:flex-end;
+    align-items:stretch;
+    background:#120b1d;
+}
+
+.memory.photo-memory img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease, filter .5s ease;
+}
+
+.memory.photo-memory:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(5,3,10,.92) 0%,
+        rgba(5,3,10,.48) 38%,
+        rgba(5,3,10,.04) 72%
+    );
+}
+
+.memory.photo-memory:hover img{
+    transform:scale(1.08);
+    filter:saturate(1.08);
+}
+
+.memory.photo-memory .memory-caption{
+    position:relative;
+    z-index:2;
+    text-align:left;
+    padding:22px 18px 18px;
+}
+
+.memory.photo-memory strong{
+    display:block;
+    font-size:19px;
+    margin-bottom:5px;
+}
+
+.memory.photo-memory small{
+    display:block;
+    font-size:13px;
+    line-height:1.4;
+}
+
+.memory-photo-badge{
+    position:absolute;
+    z-index:3;
+    top:12px;
+    right:12px;
+    padding:7px 10px;
+    border-radius:999px;
+    background:rgba(0,0,0,.38);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(8px);
+    font-size:12px;
+}
+
 /* ================= HEART ================= */
 
 .big-heart{
@@ -651,47 +719,63 @@ Because one stupid moment shouldn't erase all the good ones.
 
 <div class="memory-grid">
 
-<div class="memory">
-<span>😂</span>
+<div class="memory photo-memory">
+<img src="smile.jpeg" alt="Your laugh">
+<div class="memory-photo-badge">❤️ memory</div>
+<div class="memory-caption">
 <strong>Your laugh</strong>
 <small>One of my favourite sounds.</small>
 </div>
+</div>
 
-<div class="memory">
-<span>❤️</span>
+<div class="memory photo-memory">
+<img src="royal.jpeg" alt="Us">
+<div class="memory-photo-badge">✨ us</div>
+<div class="memory-caption">
 <strong>Us</strong>
 <small>Definitely worth protecting.</small>
 </div>
+</div>
 
-<div class="memory">
-<span>🌙</span>
+<div class="memory photo-memory">
+<img src="latenight.jpeg" alt="Late talks">
+<div class="memory-photo-badge">🌙 late nights</div>
+<div class="memory-caption">
 <strong>Late talks</strong>
 <small>The conversations that never seem to end.</small>
 </div>
+</div>
 
-<div class="memory">
-<span>🥹</span>
+<div class="memory photo-memory">
+<img src="us.jpeg" alt="Your smile">
+<div class="memory-photo-badge">🥹 favourite</div>
+<div class="memory-caption">
 <strong>Your smile</strong>
 <small>Dangerously effective.</small>
 </div>
+</div>
 
-<div class="memory">
-<span>✨</span>
+<div class="memory photo-memory">
+<img src="memories.jpeg" alt="The memories">
+<div class="memory-photo-badge">✨ memories</div>
+<div class="memory-caption">
 <strong>The memories</strong>
 <small>The little things matter.</small>
 </div>
+</div>
 
-<div class="memory">
-<span>🫶</span>
+<div class="memory photo-memory">
+<img src="wedding.jpeg" alt="Whatever comes next">
+<div class="memory-photo-badge">🫶 next chapter</div>
+<div class="memory-caption">
 <strong>Whatever comes next</strong>
-<small>Hopefully something good.</small>
+<small>Hopefully something beautiful.</small>
+</div>
 </div>
 
 </div>
 
-<p class="tiny">
-Replace these boxes with your actual photos if you want ❤️
-</p>
+ 
 
 <div class="buttons">
 <button class="primary" id="finalQuestion">
